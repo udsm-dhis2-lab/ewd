@@ -1,0 +1,42 @@
+version: '3.3'
+
+services:
+    proxy:
+        image: nginx:alpine
+        restart: always
+        ports:
+          - 80:80
+        volumes:
+          - './conf.d:/etc/nginx/conf.d'
+    ewd:
+        container_name: ewd
+        environment:
+            DB_HOST: ewd-db
+            DB_NAME: dhis
+            DB_USER: dhis
+            DB_PASSWORD: dhis
+        image: monitafrica/dpod-dhis:2.36
+        restart: always
+    ewd-db:
+        container_name: ewd-db
+        image: monitafrica/dpod-db:1.0
+        restart: always
+        environment:
+            POSTGRES_USER: dhis
+            POSTGRES_PASSWORD: dhis
+        volumes:
+            - ewd-data:/var/lib/postgresql/data
+    ewd-r-server:
+        container_name: ewd-r-server
+        build: .
+        image: vincentminde/ewd:1.0
+        restart: always
+        environment:
+            POSTGRES_USER: dhis
+            POSTGRES_PASSWORD: dhis
+        volumes:
+            - ewd-data:/var/lib/postgresql/data
+            - ./:/srv/shiny-server/
+volumes:
+    ewd-data:
+        driver: local
