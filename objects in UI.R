@@ -20,7 +20,7 @@ wellPanel(tags$h3("Please login"),
 )
 
 output_graphs<-tabsetPanel(
-  tabPanel("Runnin",
+  tabPanel("Training",
            fluidRow(
              column(10,plotlyOutput("plot1",height ="20%",width="50%"))
            )),
@@ -30,7 +30,7 @@ output_graphs<-tabsetPanel(
              column(10,plotlyOutput("plot2",inline =F,height ="20%",width="50%"))
              
            )),
-  tabPanel("Runnin +Evaluation",
+  tabPanel("Traing & Evaluation",
            fluidRow(
              column(12,plotlyOutput("plot3",height ="20%",width="50%"))
            )),
@@ -98,7 +98,7 @@ dat_opts<- tabPanel("Data",
                            value =F))
 ))
 
-sel_vars<-tabPanel("Variables & Runnin",
+sel_vars<-tabPanel("Variables & Training",
       
       column(12,
              shinydashboardPlus::box(width=12,
@@ -324,8 +324,8 @@ row_elements2<-fluidRow(
     tabsetPanel(id="input_pan",
     dat_opts,
     sel_vars,
-    tabPanel("calib1",calib1),
-    tabPanel("Calib2",calib2)
+    tabPanel("Calibration 1",calib1),
+    tabPanel("Calibration 2",calib2)
     )),
   
   column(7,output_graphs,
@@ -343,15 +343,15 @@ row_elements2_restricted<-fluidRow(
          tabsetPanel(id="input_pan",
                      dat_opts,
                      sel_vars,
-                     tabPanel("calib1",calib1),
-                     tabPanel("Calib2",calib2)
+                     tabPanel("Calibration 1",calib1),
+                     tabPanel("Calibration 2",calib2)
          )),
   
   column(8,output_graphs,
          output_dis)
 )
   
-dashboad_elements_I<-tabPanel("Dashboard I",
+dashboad_elements_I<-tabPanel("Training",
          fluidPage(
            row_elements1,    
            row_elements2
@@ -498,7 +498,7 @@ dashboad_elements_Risk_mapping<-tabPanel("Risk mapping",
 
 
 
-dashboad_elements_II<-tabPanel("Dashboard II",
+dashboad_elements_II<-tabPanel("Prediction",
                              
                              column(3,
                                     tabsetPanel(  
