@@ -1,6 +1,7 @@
 ##objects
 
-##login items  
+##login items 
+library(shinythemes)
 
 login_screen<-fluidPage(tags$h1("EWARS Dashboard"),
                         column(width=8,align="left",offset =0,
@@ -725,6 +726,7 @@ UI_NO_login<-fluidPage(fluidRow(
          #uiOutput('logout'))
 ),
 fluidRow(navbarPage("",
+theme = "mybootstrap.min.css",
                     dashboad_elements_I,
                     
                     dashboad_elements_II#,

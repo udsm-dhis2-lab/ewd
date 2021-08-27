@@ -28,3 +28,4 @@ RUN Rscript -e "install.packages('cleangeo')"
 COPY ./deps /deps
 RUN Rscript -e "install.packages('/deps/INLA_21.02.23.tar.gz', dependencies = TRUE)"
 RUN Rscript -e "install.packages('descr')"
+RUN Rscript -e "install.packages('shinythemes')"
