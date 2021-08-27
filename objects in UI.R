@@ -330,12 +330,12 @@ row_elements2<-fluidRow(
   
   column(7,output_graphs,
             output_dis),
-  column(1,
-         actionButton('save_mode','Save Model',
-                      style="color: forestgreen; background-color:grey(0.5);
-                                 padding: 10px 15px; height: 80px; cursor: pointer;
-                                 font-size: 20px; font-weight: 400;")
-  )
+  # column(1,
+  #        actionButton('save_mode','Save Model',
+  #                     style="color: forestgreen; background-color:grey(0.5);
+  #                                padding: 10px 15px; height: 80px; cursor: pointer;
+  #                                font-size: 20px; font-weight: 400;")
+  # )
   )
 
 row_elements2_restricted<-fluidRow(     
