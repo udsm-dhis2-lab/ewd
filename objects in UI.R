@@ -1,7 +1,7 @@
 ##objects
 
 ##login items 
-library(shinythemes)
+#library(shinythemes)
 
 login_screen<-fluidPage(tags$h1("EWARS Dashboard"),
                         column(width=8,align="left",offset =0,
