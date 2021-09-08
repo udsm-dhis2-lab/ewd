@@ -352,7 +352,7 @@ row_elements2_restricted<-fluidRow(
          output_dis)
 )
   
-dashboad_elements_I<-tabPanel("Training",
+dashboad_elements_I<-tabPanel("Modeling",
          fluidPage(
            row_elements1,    
            row_elements2
