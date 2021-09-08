@@ -123,11 +123,11 @@ sel_vars<-tabPanel("Variables & Training",
                                "Spline Alarm indicator(s)",
                                choices=c("rainsum","meantemperature"),multiple =T)),
   sliderInput("stop_runinYear", 
-              "Specify the year the run-in period stops",
+              "Specify the training period",
               value =2012,step =1,
               min=1990,max=2030,sep=''),
   sliderInput("stop_runinWeek", 
-              "Specify the week the run-in period stops",
+              "Specify the week the training period stops",
               value =52,step =1,
               min=52,max=52)
   )))
