@@ -41,14 +41,14 @@ output_graphs<-tabsetPanel(
                     wellPanel(tableOutput("table1")))
                     
                     )
-           ),
-  tabPanel("Auto-calibration outputs",
-           fluidRow(
-             column(5,wellPanel(tableOutput("table2")))
-           )),
-  tabPanel("Output files",
-                  uiOutput("output_files")                
-  )  
+           )#,
+  # tabPanel("Auto-calibration outputs",
+  #          fluidRow(
+  #            column(5,wellPanel(tableOutput("table2")))
+  #          )),
+  # tabPanel("Output files",
+  #                 uiOutput("output_files")                
+  # )  
   )
 
 output_dis<-column(3,
@@ -673,9 +673,9 @@ ui_yes<-fluidPage(fluidRow(
          uiOutput('logout'))
 ),
   fluidRow(navbarPage("",
-           dashboad_elements_I,
+           dashboad_elements_I #,
            
-           dashboad_elements_II #,
+           #dashboad_elements_II #,
           
            #admin_page,
            

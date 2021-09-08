@@ -85,7 +85,7 @@ server<-function(input,output,session) {
   #ISO2<-"LKA"
   #Country_name<-"Sri Lanka"
   
-  output$title_txt<-renderUI(tags$h3("Early Warning Dashboard (EWD)",style="font:cambria"))
+  output$title_txt<-renderUI(tags$h3("Early Warning Modeling (EWD)",style="font:cambria"))
   con <- dbConnect(SQLite(),"users.sqlite")
   #pb<-dbGetQuery(con, "SELECT user_name,password,role FROM users_db")
   pb<-data.frame(user_name="demo",password="demo_2019",role="admin")
