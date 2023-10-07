@@ -31,7 +31,7 @@ output_graphs<-tabsetPanel(
              column(10,plotlyOutput("plot2",inline =F,height ="20%",width="50%"))
              
            )),
-  tabPanel("Traing & Evaluation",
+  tabPanel("Training & Evaluation",
            fluidRow(
              column(12,plotlyOutput("plot3",height ="20%",width="50%"))
            )),

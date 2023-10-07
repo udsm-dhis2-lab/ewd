@@ -1,2 +1,5 @@
 docker-compose.yml
 deps
+*.pdf
+auto_out
+www/Plots*
